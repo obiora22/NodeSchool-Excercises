@@ -3,7 +3,7 @@ var url = process.argv[2];
 
 var result = '';
 http.get(url, function (response) {
-  // Is response a buffer?
+  // Is response a buffer? No. It's a readable stream.
   response.on('data', function (chunk) {
     result += chunk;
   });

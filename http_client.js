@@ -2,7 +2,7 @@ var http = require('http');
 var url = process.argv[2]
 http.get(url, function (response) {
   /*
-    response is a Node stream (NS) and
+    response is a readable Node stream (NS) and
     emits 3 events: 'data', 'error', and 'end'.
     You can listen for an event by calling
     'on' method on the NS.
